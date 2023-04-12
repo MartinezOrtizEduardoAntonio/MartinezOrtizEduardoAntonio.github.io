@@ -1,0 +1,52 @@
+body{color: gold;}
+#group1{color: darkgreen;}
+#lista_u{color: magenta;}
+#lista_item1{color: red;}
+#lista_item2{color: blue;}
+#lista_item3{color: yellow;}
+#lista_item4{color: green;}
+.link1{text-decoration: overline;}
+.link2{text-decoration: none;}
+.link3{text-decoration: line-through;}
+.link4{text-decoration: underline line-through;}
+.link5{text-decoration: underline;}
+p{background-color:black;margin-top: 5px;margin-left: 15px;margin-right: 25px;text-align: justify;text-indent: 50px;line-height: 1.5;}
+#pEspecial{background-color:darkblue;color: white;text-align: center;text-transform: uppercase;font-family: 'Delicious Handrawn', cursive;}
+.tabla{color: black;border: 3px black solid;font-family: 'Delicious Handrawn', cursive;}
+.tabla th,.tabla td{border: 1px solid black;}
+#cuadro{border: 5px solid black;font-family: 'Delicious Handrawn', cursive;}
+#cuadro th,#cuadro td{border: 1px dotted gray;}
+.c1{background-color: rgb(255,0,0);}
+.c2{background-color: rgb(255,64,0);}
+.c3{background-color: rgb(255,128,0);}
+.c4{background-color: rgb(255,191,0);}
+.c5{background-color: rgb(255,255,0);}
+.c6{background-color: rgb(191,255,0);}
+.c7{background-color: rgb(128,255,0);}
+.c8{background-color: rgb(64,255,0);}
+.c9{background-color: rgb(0,255,0);}
+.c10{background-color: rgb(0,255,64);}
+.c11{background-color: rgb(0,255,128);}
+.c12{background-color: rgb(0,255,191);}
+.c13{background-color: rgb(0,255,255);}
+.c14{background-color: rgb(0,191,255);}
+.c15{background-color: rgb(0,128,255);}
+.c16{background-color: rgb(0,64,255);}
+.c17{background-color: rgb(0,0,255);}
+.c18{background-color: rgb(64,0,255);}
+.c19{background-color: rgb(128,0,255);}
+.c20{background-color: rgb(191,0,255);}
+.c21{background-color: rgb(255,0,255);}
+.c22{background-color: rgb(255,0,191);}
+.c23{background-color: rgb(255,0,128);}
+.c24{background-color: rgb(255,0,64);}
+.alterno{background-color: gray;}
+h1:hover,h2:hover,h3:hover{color: rgb(0, 0, 0);background-color: darkslategray;text-transform: uppercase;text-shadow: #15d12b 3px 3px 3px;}
+td:hover,th:hover{background-color:lightskyblue;color: black;}
+#cuadro td:hover,#cuadro th:hover{background-color:lightgreen;color:black;}
+
+ul li:first-child{background-color: red;}
+ul li:nth-child{background-color: rgb(0, 17, 255);}
+ul li:last-child{background-color: rgb(43, 255, 0);}
+#tabla th:nth-child(even){background-color: lightgreen; color: black;}
+#tabla tr:nth-child(odd){background-color: lightpink; color: white;}

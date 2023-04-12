@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--
+        Martinez Ortiz Eduardo Antonio 
+        Programacion Web I
+        date 
+        Description: labes of table
+    -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 02 - Ejercicio 01</title>
+    <meta name="autor" content="Martinez Ortiz Eduardo Antonio">
+    <meta name="revised" content="#">
+    <meta name="description" content="table, border, tr, th, td, thead, tbody, tfoot, colspan, rowspan">
+
+    <!--Styles-->
+    <link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <hgroup>
+        <h1>Tablas</h1>
+        <h2>Combinar renglones y columnas</h2>
+        <table border="3">
+            <tr>
+                <th>No.</th>
+                <th>Nombre</th>
+                <th>Apellido paterno</th>
+                <th>Apellido Materno</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Juan</td>
+                <td></td>
+                <td>perez</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Pedro</td>
+                <td colspan="2"><center>Lopez</center></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td rowspan="2">Tomas</td>
+                <td>Lopez</td>
+                <td>Perez</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td rowspan="2">Martinez</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Gerardo</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Mario</td>
+                <td>Mario</td>
+            </tr>
+        </table>
+    </hgroup>
+    <br>
+    <hgroup>
+        <hgroup>
+            <table border="3">
+                <tr><th colspan="4">Tabla No 1</th></tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td rowspan="3">5</td>
+                    <td>6</td>
+                    <td colspan="2">7</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>9</td>
+                    <td rowspan="2">10</td>
+                </tr>
+                <tr>
+                    <td colspan="2">11</td>
+                </tr>
+            </table>
+        </hgroup>
+        <br>
+        <table border="3">
+            <tr><th colspan="4">Tabla No 2</th></tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td rowspan="3">5</td>
+                <td>6</td>
+                <td colspan="2">7</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>9</td>
+                <td rowspan="2">10</td>
+            </tr>
+            <tr>
+                <td colspan="2">11</td>
+            </tr>
+        </table>
+    </hgroup>
+    <br>
+    <hgroup>
+        <table border="3">
+            <tr><th colspan="5">Tabla No 3</th></tr>
+            <tr>
+                <td colspan="2"></td>
+                <td><h4>comida</h4></td>
+                <td><h4>hotel</h4></td>
+                <td><h4>transporte</h4></td>
+            </tr>
+            <tr>
+                <td colspan="5"><h4><center>vallarta</center></h4></td>
+            </tr>
+            <tr>
+                <td colspan="2">01/jul/2022</td>
+                <td>15</td>
+                <td>120</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td colspan="2">02/jul/2022</td>
+                <td>18</td>
+                <td>120</td>
+                <td>34</td>
+            </tr>
+            <tr>
+                <td colspan="2">02/jul/2022</td>
+                <td>25</td>
+                <td>120</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td colspan="5"><h4><center>Nuevo vallarta</center></h4></td>
+            </tr>
+            <tr>
+                <td colspan="2">04/jul/2022</td>
+                <td>10</td>
+                <td>75</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td colspan="2">05/jul/2022</td>
+                <td>12</td>
+                <td>75</td>
+                <td>14</td>
+            </tr>
+            <tr>
+                <td colspan="2"><h4>TOTAL</h4></td>
+                <td><h4>80</h4></td>
+                <td><h4>510</h4></td>
+                <td><h4>60</h4></td>
+            </tr>
+        </table>
+        <h2>Ejercicio 3</h2>
+        <table border="3">
+            <thead>
+                <tr><th colspan="4">Table No. 3</th></tr>
+                <tr><th>&nbsp;</th><th>comida</th><th>hotel</th><th>Transporte</th></tr>
+            </thead>
+            <tbody>
+                <tr><th colspan="4">vallarta</th></tr>
+                <tr><td>01/jul/2022</td><td>15</td><td>120</td><td>ND</td></tr>
+            </tbody>
+            <tfoot>
+                <tr><th>Total</th><th>80</th><th>510</th></tr>
+            </tfoot>
+        </table>
+    </hgroup>
+</body>
+
+</html>
