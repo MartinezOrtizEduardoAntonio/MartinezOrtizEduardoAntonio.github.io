@@ -13,3 +13,9 @@ img{
     column-rule: dotted;
     column-count: 4;
 }
+
+         
+.gradA { height: 25px; width: 1000px; background-image: linear-gradient(to left, red, purple); }
+.gradB { height: 25px; width: 1000px; background-image: linear-gradient(to right, red, orange, yellow, limegreen, cyan, blue, magenta, red); }
+.gradC { height: 25px; width: 1000px; background-image: linear-gradient(black, white, black); }
+.gradD { height: 25px; width: 1000px; background-image: linear-gradient(to right, darkgreen, white, crimson); }
