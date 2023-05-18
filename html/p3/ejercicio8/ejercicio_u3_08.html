@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--
+        Martinez Ortiz Eduardo Antonio 
+        Programacion Web I
+        date 
+        Description: js bucles
+    -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantilla</title>
+    <meta name="autor" content="Martinez Ortiz Eduardo Antonio">
+    <meta name="revised" content="#">
+    <meta name="description" content="#">
+
+    <!--Styles-->
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <hgroup>
+        <label>Nombre</label>
+        <input type="text" placeholder="(nombre)" id="nombre">
+        <input type="button" value="accion" onclick="let varMensaje='hola '+document.getElementById('nombre').value+', como estas?';
+        document.getElementById('resultados').value=varMensaje;
+        alert(resultados.value)">
+        <br>
+        <label>Resultados: </label>
+        <input type="text" placeholder="(Resultados)" id="resultados">
+    </hgroup>
+
+    <hgroup>
+        <table border="2">
+            <tr>
+                <th>figura</th>
+                <th>variable</th>
+                <th>resultado</th>
+            </tr>
+            <tr>
+                <td>cuadro</td>
+                <td rowspan="2">arista: <input type="number" id="varArista"></td>
+                <td>Area: <input type="number" id="varAreaCubo"> <input type="button" id="calcular" onclick="calcularCudrados()" value="calcular"></td>
+            </tr>
+            <tr>
+                <td>cubo</td>
+                <td>volumen: <input type="number" id="varVolumenCubo"> <input type="button" id="calcular" onclick="calcularCudrados()" value="calcular"></td>
+            </tr>
+            <tr>
+                <td rowspan="2">Rectangulo: </td>
+                <td>base: <input type="number" id="varBase"></td>
+                <td rowspan="2"> arean:
+                    <input type="number" id="varArea">
+                    <input type="button" id="calcular" onclick="sumarCuadrado()" value="calcular">
+                </td>
+            </tr>
+            <tr>
+                <td>altura: <input type="number" id="varAltura"></td>
+            </tr>
+            <tr>
+                <td>Prisma rectangular</td>
+                <td>profundidad: <input type="number" id="varProfundidad"></td>
+                <td>volumen: 
+                    <input type="number" id="varVolumen">
+                    <input type="button" id="calcular" onclick="sumarCubo()" value="calcular">
+                </td>
+            </tr>
+        </table>
+    </hgroup>
+
+    <hgroup>
+        <h2>geolocalizacion</h2>
+        <button onclick="geoLocation()">Obtener cordenadas</button>
+        <p id="data"></p>
+        <p id="map"></p>
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29565.96716352153!2d-101.01585388183594!3d22.135662060088432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842a98bba4375a23%3A0x545f97e9a1f09d2a!2sParque%20Tangamanga%20I!5e0!3m2!1ses!2smx!4v1684348525847!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </hgroup>
+
+    <hgroup>
+        <h2>Almacenamiento</h2>
+        <button onclick="aumentaContador()">contador No.</button>
+        <label>contador NO. 1:</label>
+        <input type="number" readonly id="contador_1" placeholder="(contador No .1)">
+        <br><br>
+        <button onclick="aumentaContador2()">contador No.</button>
+        <label>contador NO. 2:</label>
+        <input type="number" readonly id="contador_2" placeholder="(contador No .2)">
+    </hgroup>
+
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
