@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+CAUTION: Do not modify this file unless you know what you are doing.
+         Unexpected results may occur if the code is changed deliberately.
+-->
+<dbmodel pgmodeler-ver="0.7.0">
+<database name="new_database">
+</database>
+
+<schema name="public" protected="true" fill-color="#e1e1e1" sql-disabled="true">
+</schema>
+
+<table name="trainer">
+	<schema name="public"/>
+	<position x="82" y="46"/>
+	<column name="id" not-null="true">
+		<type name="bigserial"/>
+	</column>
+	<column name="name">
+		<type name="varchar" length="100"/>
+	</column>
+	<column name="last_name">
+		<type name="varchar" length="100"/>
+	</column>
+	<column name="birthday">
+		<type name="date"/>
+	</column>
+	<column name="skill">
+		<type name="varchar" length="50"/>
+	</column>
+	<column name="salary">
+		<type name="double precision"/>
+	</column>
+	<constraint name="id_trainer_key" type="pk-constr" factor="10" table="public.trainer">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="company_customer">
+	<schema name="public"/>
+	<position x="87" y="196"/>
+	<column name="id">
+		<type name="bigserial"/>
+	</column>
+	<column name="name">
+		<type name="varchar" length="50"/>
+	</column>
+	<column name="address">
+		<type name="varchar" length="300"/>
+	</column>
+	<column name="description">
+		<type name="text"/>
+	</column>
+	<column name="num_customer">
+		<type name="smallint"/>
+	</column>
+	<constraint name="id_company_customer_key" type="pk-constr" factor="10" table="public.company_customer">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="courses">
+	<schema name="public"/>
+	<position x="649" y="53"/>
+	<column name="id">
+		<type name="bigserial"/>
+	</column>
+	<column name="name">
+		<type name="varchar" length="100"/>
+	</column>
+	<column name="description">
+		<type name="text"/>
+	</column>
+	<column name="duration">
+		<type name="time" length="10"/>
+	</column>
+	<column name="price">
+		<type name="double precision"/>
+	</column>
+	<constraint name="id_courses_key" type="pk-constr" factor="10" table="public.courses">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<relationship name="trainer_has_many_courses" type="rel1n"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 col-indexes="5" constr-indexes="0"
+	 src-table="public.trainer"
+	 dst-table="public.courses"
+	 src-required="false" dst-required="false"/>
+
+<table name="training_sessions">
+	<schema name="public"/>
+	<position x="936" y="356"/>
+	<column name="id">
+		<type name="bigserial"/>
+	</column>
+	<column name="date_session">
+		<type name="timestamp"/>
+	</column>
+	<column name="duration">
+		<type name="time"/>
+	</column>
+</table>
+
+<relationship name="courses_has_many_training_sessions" type="rel1n"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 col-indexes="1" constr-indexes="0"
+	 src-table="public.courses"
+	 dst-table="public.training_sessions"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="company_customer_has_many_training_sessions" type="rel1n"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 col-indexes="2" constr-indexes="1"
+	 src-table="public.company_customer"
+	 dst-table="public.training_sessions"
+	 src-required="false" dst-required="false"/>
+
+<table name="facturas">
+	<schema name="public"/>
+	<position x="551" y="543"/>
+	<column name="id">
+		<type name="bigserial"/>
+	</column>
+	<column name="date_facture">
+		<type name="date"/>
+	</column>
+	<column name="total">
+		<type name="double precision"/>
+	</column>
+	<constraint name="id_facturas_key" type="pk-constr" factor="10" table="public.facturas">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<relationship name="company_customer_has_many_facturas" type="rel1n"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 col-indexes="1" constr-indexes="1"
+	 src-table="public.company_customer"
+	 dst-table="public.facturas"
+	 src-required="false" dst-required="false"/>
+
+</dbmodel>
