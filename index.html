@@ -1,159 +1,891 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="assets/css/meanmenu.min.css" />
+
+    <link rel="stylesheet" href="assets/css/boxicons.min.css" />
+
+    <link rel="stylesheet" href="assets/css/flaticon.css" />
+
+    <link rel="stylesheet" href="assets/css/magnific-popup.min.css" />
+
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <link rel="stylesheet" href="assets/css/dark.css" />
+
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css'>
+    
+
+    <title>CapacitaT Kocina: Elevando el Arte Culinario a Nuevas Alturas</title>
 </head>
 
 <body>
-    <div class="container">
-        portafolio
-        <hr>
-        <div class="row">
-            <div class="col">
-                <div class="card">
-                    <label for="">Objetivos</label>
-                    <hr>
-                    <p>
-                        Los objetivos de la página que se describe son los siguientes:
 
-                        Gestión eficiente de capacitadores: Desarrollar una plataforma que permita a la empresa
-                        capacitadora gestionar
-                        de manera eficiente a sus capacitadores, garantizando una asignación óptima de estos para
-                        satisfacer la demanda
-                        de capacitación y formación.
-
-                        Maximización de sesiones de capacitación: El principal objetivo es maximizar el número total de
-                        sesiones de
-                        capacitación ofrecidas cada semana, teniendo en cuenta las restricciones de disponibilidad de
-                        los capacitadores
-                        y las solicitudes de capacitación de las empresas clientes.
-
-                        Funcionalidades exclusivas para la empresa capacitadora: Desarrollar herramientas específicas
-                        para la empresa
-                        capacitadora, como el alta de capacitadores, alta de empresas clientes, gestión de cursos
-                        ofertados (incluyendo
-                        costos, horarios disponibles y asignación de capacitadores), generación de facturas para las
-                        empresas clientes,
-                        generación de totales a pagar a los capacitadores mensualmente, entre otras.
-
-                        Acceso compartido: Proporcionar acceso compartido a ciertas funcionalidades, como la consulta
-                        del plan de
-                        capacitaciones semanal o mensual, que puede ser consultado por la empresa capacitadora, los
-                        capacitadores y las
-                        empresas clientes.
-
-                        Facilidades de gestión: Ofrecer opciones de alta, baja, edición y consulta de empresas cliente y
-                        capacitadores,
-                        con y sin filtros, para una gestión eficiente de la base de datos de la empresa capacitadora.
-
-                        Consulta de información relevante: Permitir la consulta de información relevante, como la
-                        disponibilidad de
-                        capacitadores, pagos mensuales a los capacitadores, etc., exclusivamente para la empresa
-                        capacitadora.
-
-                        Es importante definir un boceto y paletas de colores en la etapa de planificación para
-                        garantizar una interfaz
-                        intuitiva y atractiva para los usuarios finales de la plataforma.
-                    </p>
+    <div class="loader-content">
+        <div class="d-table">
+            <div class="d-table-cell">
+                <div class="sk-folding-cube">
+                    <div class="sk-cube1 sk-cube"></div>
+                    <div class="sk-cube2 sk-cube"></div>
+                    <div class="sk-cube4 sk-cube"></div>
+                    <div class="sk-cube3 sk-cube"></div>
                 </div>
             </div>
         </div>
-        <br><br>
-        <div class="row">
-            <div class="card">
-                <h3>Diagrama Relacional</h3>
-                <center><img src="database/image.png" alt="" width="500px" height="500px"></center>
-                <p>
-                    Con estas entidades en mente, puedes establecer las relaciones entre ellas:
+    </div>
 
-                    Un Capacitador puede impartir varios Cursos.
-                    Un Curso puede tener varias Sesiones de Capacitación.
-                    Una Empresa Cliente puede solicitar múltiples Sesiones de Capacitación.
-                    Una Sesión de Capacitación está asociada a un solo Curso y una sola Empresa Cliente.
-                    Una Factura está asociada a una sola Empresa Cliente.
-                    Estas son solo algunas sugerencias iniciales para la estructura de la base de datos. Es importante
-                    que adaptes este diseño según las necesidades específicas de tu aplicación, teniendo en cuenta
-                    detalles como la normalización de datos, restricciones de integridad referencial, entre otros
-                    aspectos. ¡Espero que esta idea te sea útil para comenzar a desarrollar tu aplicación!
-                </p>
 
-                <h3>Mapa del sitio</h3>
-                <center><img src="database/WEB.png" alt="" width="500px" height="500px"></center>
-                <br>
-                <p>
-                    El propósito de un mapa del sitio es proporcionar una estructura visual de la organización y la
-                    jerarquía de las páginas web dentro de un sitio. Es una herramienta útil tanto para los
-                    desarrolladores web como para los usuarios finales. Algunos de sus propósitos principales son:
-
-                    Facilitar la navegación: Un mapa del sitio ayuda a los usuarios a comprender la estructura del sitio
-                    y a encontrar fácilmente la información que están buscando. Esto es especialmente útil en sitios web
-                    grandes con muchas páginas.
-
-                    Mejorar la usabilidad: Al proporcionar una vista general de todas las páginas disponibles en el
-                    sitio, un mapa del sitio puede mejorar la experiencia del usuario al permitirles navegar de manera
-                    más eficiente y rápida.
-
-                    Ayudar en la planificación y el diseño: Los mapas del sitio son útiles durante la fase de
-                    planificación y diseño de un sitio web, ya que ayudan a los diseñadores y desarrolladores a
-                    organizar el contenido y la estructura del sitio de manera lógica y coherente.
-
-                    Optimización para motores de búsqueda (SEO): Al tener un mapa del sitio bien estructurado, los
-                    motores de búsqueda pueden indexar mejor todas las páginas del sitio, lo que puede mejorar su
-                    visibilidad en los resultados de búsqueda.
-
-                    Comunicar la estructura del sitio: Los mapas del sitio también son útiles para comunicar la
-                    estructura del sitio a otras partes interesadas, como clientes, gerentes de proyecto y equipos de
-                    marketing.
-
-                    En resumen, un mapa del sitio es una herramienta valiosa que ayuda a organizar y comunicar la
-                    estructura de un sitio web, facilitando la navegación para los usuarios y mejorando su visibilidad
-                    en los motores de búsqueda.
-                </p>
+    <header class="header-area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-2 col-sm-0">
+                    <div class="logo">
+                        <a href="index.html"><img src="assets/images/logo.jpg" alt="logo" /></a>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-sm-8 text-right pr-0">
+                    <div class="header-content-right">
+                        <ul class="header-contact">
+                            <li><a href="tel:+524443579030"><i class="fi fi-brands-whatsapp"></i>+52 444 357 9030</a></li>
+                            <li><a href=""><i class="fi fi-sr-comment-alt-dots"></i><span class="__cf_email__"
+                                        data-cfemail="78101d1414173808190b17561b1715">eduardoa4848@Outlook.es</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-4 text-right pl-0">
+                    <div class="header-content-right">
+                        <ul class="header-social">
+                            <li>
+                                <a href="#" target="_blank"><i class="fi fi-brands-youtube"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><i class="fi fi-brands-tik-tok"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><i class="fi fi-brands-telegram"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-        <br><br>
-        <div class="row">
-            <div class="col">
-                <div class="card">
-                    <div class="container">
-                        <h4>DIAGRAMA RC </h4>
-                        <center><img src="database/web2.png" alt="" width="500px" height="500px"></center>
+    </header>
 
-                        <h4>cronograma </h4>
+
+    <div class="navbar-area">
+        <div class="mobile-nav">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.jpg" alt="logo" />
+            </a>
+        </div>
+        <div class="main-nav">
+            <div class="container">
+                <nav class="navbar navbar-expand-md navbar-light">
+                    <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                        <ul class="navbar-nav text-left">
+
+                        </ul>
+                    </div>
+                    <div class="nav-btn">
+                        <a href="shop.html" class="box-btn">Descargar</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="banner-area">
+        <div class="d-table">
+            <div class="d-table-cell">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="banner-content">
+                                    <h1>CapacitaT Kocina</h1>
+                                    <h1>Elevando el Arte Culinario a Nuevas Alturas</h1>
+                                <p>
+                                    CapacitaT Kocina es una empresa mexicana de capacitacion culinaria, rama de CapacitaT México.
+                                </p>
+                                <div class="banner-btn">
+                                    <a href="contact.html" class="box-btn">Contáctanos</a>
+                                    <a href="about.html" class="box-btn border-btn">Leer más</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="banner-img">
+                                <img src="https://funcionactiva.com/imagenes/Tipos-de-cocineros-1024x671.jpg" alt="banner-img" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home-shape">
+            <div class="shape1">
+                <img src="assets/images/shape/1.png" alt="shape">
+            </div>
+            <div class="shape2">
+                <img src="assets/images/shape/2.png" alt="shape">
+            </div>
+            <div class="shape3">
+                <img src="assets/images/shape/3.png" alt="shape">
+            </div>
+            <div class="shape4">
+                <img src="assets/images/shape/4.png" alt="shape">
+            </div>
+            <div class="shape5">
+                <img src="assets/images/shape/5.png" alt="shape">
+            </div>
+            <div class="shape6">
+                <img src="assets/images/shape/6.png" alt="shape">
+            </div>
+        </div>
+    </section>
+
+
+    <section class="home-service-area pt-100 pb-70">
+        <div class="container">
+            <div class="section-title">
+                <span>Historia sobre CapacitaT Kocina</span>
+                <h2>¿De Donde Proviene CapacitaT Kocina?</h2>
+                <p>
+                    Una empresa grande capacitadora para empresas aun mas grandes.
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single-service">
+                        <div class="service-img">
+                            <img src="assets/images/service/s1.png" alt="service" />
+                        </div>
+                        <div class="service-content">
+                            <h3>Origen</h3>
+                            <p>
+                                Capacitat Kocina es una empresa capacitadora centrada en el arte culinario, fundada en 2003 con la visión de convertirse en un referente en la formación gastronómica. Su origen se remonta a la pasión compartida por un grupo de chefs y educadores culinarios que buscaban ofrecer una plataforma integral para el aprendizaje y la excelencia en la cocina.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single-service">
+                        <div class="service-img">
+                            <img src="assets/images/service/s2.png" alt="service" />
+                        </div>
+                        <div class="service-content">
+                            <h3>Bases</h3>
+                            <p>
+                                Las bases de Capacitat Kocina se fundamentan en la creencia de que la cocina es un arte que requiere tanto habilidades técnicas como creatividad. La empresa se esfuerza por proporcionar programas educativos que abarcan desde los fundamentos básicos hasta técnicas culinarias avanzadas, adaptadas a las necesidades de diversos niveles de habilidad y experiencia.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single-service">
+                        <div class="service-img">
+                            <img src="assets/images/service/s3.png" alt="service" />
+                        </div>
+                        <div class="service-content">
+                            <h3>Historia</h3>
+                            <p>Desde su creación, Capacitat Kocina ha crecido y evolucionado, convirtiéndose en un centro de capacitación reconocido por su enfoque innovador y su compromiso con la excelencia culinaria. A lo largo de los años, ha ampliado su oferta formativa para incluir una variedad de cursos especializados que abarcan desde la repostería clásica hasta la cocina molecular.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single-service">
+                        <div class="service-img">
+                            <img src="assets/images/service/s4.png" alt="service" />
+                        </div>
+                        <div class="service-content">
+                            <h3>Objetivo</h3>
+                            <p>
+                                El objetivo principal de Capacitat Kocina es proporcionar a sus estudiantes las habilidades y conocimientos necesarios para sobresalir en el mundo culinario. Ya sea que aspiren a convertirse en chefs profesionales, emprendedores gastronómicos o simplemente entusiastas de la cocina, la empresa se esfuerza por brindarles las herramientas y la inspiración necesarias para alcanzar sus metas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="home-company-area bg-color">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-12">
+                    <div class="company-content">
+                        <div class="company-tittle">
+                            <span>Nuestro Servicio</span>
+                            <h2>CapacitaT Kocina</h2>
+                            <p>
+                                
+Capacitat Kocina ofrece una amplia gama de servicios diseñados para satisfacer las necesidades y aspiraciones de sus consumidores, que van desde entusiastas de la cocina hasta profesionales gastronómicos. Estos servicios incluyen:
+                            </p>
+                            <ol>
+                                <li><b>Cursos de Formación:</b> Capacitat Kocina ofrece una variedad de cursos de formación que abarcan diferentes aspectos de la cocina, desde los fundamentos básicos hasta técnicas culinarias avanzadas. Estos cursos están diseñados para adaptarse a diferentes niveles de habilidad y experiencia, y cubren áreas como repostería, cocina tradicional, cocina gourmet y cocina molecular.</li>
+                                <li><b>Programas Especializados:</b> Además de sus cursos estándar, la empresa ofrece programas especializados que se centran en áreas específicas de la cocina, como panadería artesanal, pastelería fina, cocina internacional y técnicas avanzadas de cocina molecular. Estos programas están diseñados para aquellos que desean especializarse en un área particular o expandir sus conocimientos en un campo específico de la gastronomía.</li>
+                                <li><b>Clases Prácticas y Teóricas:</b> Los servicios de Capacitat Kocina incluyen tanto clases prácticas en las que los estudiantes tienen la oportunidad de trabajar en la cocina y poner en práctica lo que han aprendido, como clases teóricas que cubren aspectos fundamentales de la cocina, incluyendo seguridad alimentaria, nutrición y gestión de cocina.</li>
+                                <li><b>Asesoramiento Personalizado:</b> La empresa ofrece asesoramiento personalizado a sus estudiantes, brindándoles orientación y apoyo para ayudarles a alcanzar sus metas culinarias. Esto puede incluir asesoramiento sobre carreras culinarias, planificación de menús, desarrollo de habilidades empresariales y más.</li>
+                                <li><b>Eventos y Talleres:</b> Capacitat Kocina organiza eventos especiales y talleres temáticos dirigidos tanto a estudiantes como al público en general. Estos eventos pueden incluir demostraciones culinarias, catas de vinos, cenas temáticas y más, brindando una oportunidad para aprender, socializar y disfrutar de la gastronomía en un entorno dinámico y divertido.</li>
+                            </ol>
+                        </div>
+                        <a href="#" class="box-btn">
+                            Adquirir
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="https://www.hosteleriabenidorm.com/wp-content/uploads/MASTER-EN-COCINA-COCINERO-PROFESIONAL-JEFE-DE-COCINA.jpg" alt="">
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="choose-area ptb-100">
+        <div class="container">
+            <div class="section-title">
+                <span>CapacitaT Kocina Capacitacion Culinaria</span>
+                <h2>¿Porque CapacitaT Kocina es toda una experiencia?</h2>
+                <p> 
+                    Aumenta las habilidades de tus empleados, mejora tu servicio y compite con las grandes cadenas nacionales.
+                </p>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="choose-img">
+                        <img src="assets/images/choose-img.png" alt="choose" />
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="choose-content">
+                        <div class="faq-accordion">
+                            <ul class="accordion">
+                                <li class="accordion-item">
+                                    <div class="icon">
+                                        <i class="fi fi-sr-angle-right"></i>
+                                    </div>
+                                    <a class="accordion-title active" href="javascript:void(0)">
+                                        <i class="fi fi-sr-bookmark"></i>¿Porque comprar CapacitaT Kocina?
+                                    </a>
+                                    <p class="accordion-content show">
+                                        Capacitat Kocina se destaca por ofrecer una formación culinaria de alta calidad, impartida por chefs experimentados y educadores culinarios expertos. Los cursos están diseñados para proporcionar una combinación equilibrada de teoría y práctica, garantizando que los estudiantes adquieran habilidades sólidas y conocimientos fundamentales en el arte culinario.
+                                        <br><br>
+                                        Tome el control de su negocio e incremente sus ventas con la capacitacion culinaria mas completa en México. 
+                                    </p>
+                                </li>
+                                <li class="accordion-item">
+                                    <div class="icon">
+                                        <i class="fi fi-sr-angle-right"></i>
+                                    </div>
+                                    <a class="accordion-title" href="javascript:void(0)">
+                                        <i class="fi fi-sr-bookmark"></i>¿Que pasa si no era lo que esperaba?
+                                    </a>
+                                    <p class="accordion-content">
+                                        
+Si un estudiante no encuentra que los cursos de Capacitat Kocina cumplan con sus expectativas, la empresa generalmente tiene políticas y medidas en su lugar para abordar esta situación y garantizar la satisfacción del cliente.<br><br>Contacte con el soporte técnico.
+                                    </p>
+                                </li>
+                                <li class="accordion-item">
+                                    <div class="icon">
+                                        <i class="fi fi-sr-angle-right"></i>
+                                    </div>
+                                    <a class="accordion-title" href="javascript:void(0)">
+                                        <i class="fi fi-sr-bookmark"></i>¿Como puedo confiar en que servira en mi negocio?
+                                    </a>
+                                    <p class="accordion-content">
+                                        Examina detalladamente el contenido de los cursos ofrecidos por Capacitat Kocina para asegurarte de que se alineen con las necesidades y objetivos específicos de tu negocio. Considera si los temas cubiertos son relevantes para tus operaciones y si proporcionarán el conocimiento y las habilidades que necesitas para mejorar tu negocio culinario.
+                                    </p>
+                                </li>
+                                <li class="accordion-item">
+                                    <div class="icon">
+                                        <i class="fi fi-sr-angle-right"></i>
+                                    </div>
+                                    <a class="accordion-title" href="javascript:void(0)">
+                                        <i class="fi fi-sr-bookmark"></i>¿Qué pasa si tengo un problema con la capacitacion?
+                                    </a>
+                                    <p class="accordion-content">
+                                        
+Si experimentas algún problema con la capacitación proporcionada por Capacitat Kocina, la empresa generalmente estará dispuesta a abordar tus inquietudes y resolver cualquier problema que puedas tener.<br><br>Lo primero que debes hacer es comunicarte directamente con Capacitat Kocina para informarles sobre el problema que estás experimentando. Puedes hacerlo a través de correo electrónico, teléfono u otros medios de contacto proporcionados por la empresa. Explica claramente cuál es el problema y proporciona detalles específicos para que puedan entender completamente tu situación.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+
+    <!---
+    <section class="home-case ptb-100">
+        <div class="container">
+            <div class="section-title">
+                <span>Case Studies</span>
+                <h2>Have a Look Our Work Showcase</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Quis ipsum suspendisse.</p>
+            </div>
+            <div class="case">
+                <ul class="all-case">
+                    <li class="active" data-filter="*"><span>All</span></li>
+                    <li data-filter=".design"><span>Design</span></li>
+                    <li data-filter=".dev"><span>Development</span></li>
+                    <li data-filter=".cyber"><span>Cyber Security</span></li>
+                </ul>
+            </div>
+            <div class="row case-list">
+                <div class="col-lg-4 col-sm-6 item cyber">
+                    <div class="single-case">
+                        <div class="case-img">
+                            <a href="case-details.html">
+                                <img src="assets/images/case/c1.jpg" alt="case" />
+                            </a>
+                        </div>
+                        <div class="content">
+                            <a href="case-details.html">
+                                <h3>Joe’s Company Software Development Case</h3>
+                            </a>
+                            <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod
+                                tempor incididunt ipsum dolor.</p>
+                            <a href="case-details.html" class="line-bnt">
+                                View Project Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 item dev design">
+                    <div class="single-case">
+                        <div class="case-img">
+                            <a href="case-details.html">
+                                <img src="assets/images/case/c2.jpg" alt="case" />
+                            </a>
+                        </div>
+                        <div class="content">
+                            <a href="case-details.html">
+                                <h3>Ride Share App UX Studies & Development Case</h3>
+                            </a>
+                            <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod
+                                tempor incididunt ipsum dolor.</p>
+                            <a href="case-details.html" class="line-bnt">
+                                View Project Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 item dev">
+                    <div class="single-case">
+                        <div class="case-img">
+                            <a href="case-details.html">
+                                <img src="assets/images/case/c3.jpg" alt="case" />
+                            </a>
+                        </div>
+                        <div class="content">
+                            <a href="case-details.html">
+                                <h3>Restaurant Management & Web Developing</h3>
+                            </a>
+                            <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod
+                                tempor incididunt ipsum dolor.</p>
+                            <a href="case-details.html" class="line-bnt">
+                                View Project Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 item dev cyber">
+                    <div class="single-case">
+                        <div class="case-img">
+                            <a href="case-details.html">
+                                <img src="assets/images/case/c4.jpg" alt="case" />
+                            </a>
+                        </div>
+                        <div class="content">
+                            <a href="case-details.html">
+                                <h3>IT Software Company Development Case</h3>
+                            </a>
+                            <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod
+                                tempor incididunt ipsum dolor.</p>
+                            <a href="case-details.html" class="line-bnt">
+                                View Project Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 item dev design">
+                    <div class="single-case">
+                        <div class="case-img">
+                            <a href="case-details.html">
+                                <img src="assets/images/case/c5.jpg" alt="case" />
+                            </a>
+                        </div>
+                        <div class="content">
+                            <a href="case-details.html">
+                                <h3>Parking Management & Web Developing</h3>
+                            </a>
+                            <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod
+                                tempor incididunt ipsum dolor.</p>
+                            <a href="case-details.html" class="line-bnt">
+                                View Project Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 item dev cyber design">
+                    <div class="single-case">
+                        <div class="case-img">
+                            <a href="case-details.html">
+                                <img src="assets/images/case/c6.jpg" alt="case" />
+                            </a>
+                        </div>
+                        <div class="content">
+                            <a href="case-details.html">
+                                <h3>Temperature App UX Studies & Development Case</h3>
+                            </a>
+                            <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod
+                                tempor incididunt ipsum dolor.</p>
+                            <a href="case-details.html" class="line-bnt">
+                                View Project Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="case-btn text-center">
+                <p>We Have More Amazing Cases. <a href="#">View More</a></p>
+            </div>
+        </div>
+    </section>
+    --->
+    
+    <section class="feature-area bg-color ptb-100">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="contnet">
+                        <div class="feature-tittle">
+                            <span>CapacitaT Kocina</span>
+                            <h2>La forma más fácil de capacitar a tus empleados</h2>
+                            <p>Somos más que una empresa de capacitacion, Somos CapacitaT Kocina, una forma de trabajar que da resultados.
+                                Nos importas tu y tu negocio.
+                            </p>
+                        </div>
+                        <ul>
+                            <li>
+                                <i class="fi fi-sr-check"></i>
+                                Rapidez — Contacto en menos de 15 minutos
+                            </li>
+                            <li>
+                                <i class="fi fi-sr-check"></i>
+                                Intuitivo — Fácil de empezar, empieza a aprender en un par de minutos
+                            </li>
+                            <li>
+                                <i class="fi fi-sr-check"></i>
+                                Mercadotecnia — Atrae más clientes y encantalos con tus habilidades culinarias magistrales
+                            </li>
+                        </ul>
+                        <a href="" class="box-btn">Hagámoslo!</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="feature-img">
+                        <img src="assets/images/feature-img.png" alt="feature" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="home-team-area ptb-100">
+        <div class="container">
+            <div class="section-title">
+                <span>Famosos de CapacitaT Kocina</span>
+                <h2>Personas Famosas Que Se Capacitaron En CapacitaT Kocina</h2>
+            </div>
+            <div class="home-team-slider owl-carousel owl-theme">
+                <div class="single-team">
+                    <div class="team-img">
+                        <img src="assets/images/team/p1.jpeg" alt="team" />
+                    </div>
+                    <div class="content text-center">
+                        <h3>Gordon Ramsay</h3>
+                        <p>Chef británico</p>
+                    </div>
+                </div>
+                <div class="single-team">
+                    <div class="team-img">
+                        <img src="assets/images/team/p2.jpeg" alt="team" />
+                    </div>
+                    <div class="content text-center">
+                        <h3>Enrique Olvera</h3>
+                        <p>Chef mexicano</p>
+                    </div>
+                </div>
+                <div class="single-team">
+                    <div class="team-img">
+                        <img src="assets/images/team/p3.jpg" alt="team" />
+                    </div>
+                    <div class="content text-center">
+                        <h3>Massimo Bottura</h3>
+                        <p>Chef italiano</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="client-area ptb-100 bg-color">
+        <div class="container">
+            <div class="section-title">
+                <span>Testimonios</span>
+                <h2>Lo que nuestros clientes dicen de CapacitaT Kocina</h2>
+                <p>Si todavia no estas convencido de que CapacitaT Kocina es para ti, mira estos testimonios de nuestros clientes.</p>
+            </div>
+            <div class="client-wrap owl-carousel owl-theme">
+                <div class="single-client">
+                    <img src="assets/images/client/1.jpg" alt="img">
+                    <p>Me ha funcionado muy bien en mi negocio, es fácil de aprender, muy completo, y 
+                        me han ayudado en lo que he necesitado y lo mejor, a muy buen precio.</p>
+                    <h3>Steven Jhony</h3>
+                    <span>CEO of Gourmet Company</span>
+                </div>
+                <div class="single-client">
+                    <img src="assets/images/client/2.jpg" alt="img">
+                    <p>Me permite organizar y darle seguimiento a mis empleados y a todas sus habilidades de manera simple y eficaz. 
+                        El equipo de soporte al cliente siempre está ahí para ayudarte cuando más lo necesitas.</p>
+                    <h3>Omit Jackson</h3>
+                    <span>Gourmet Restaurant Founder</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!---
+    <section class="home-blog-area ptb-100">
+        <div class="container">
+            <div class="section-title">
+                <span>Blog Post</span>
+                <h2>Our Regular Blogs</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A facilis vel consequatur tempora atque
+                    blanditiis exercitationem incidunt, alias corporis quam assumenda dicta.</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-blog">
+                        <div class="blog-img">
+                            <a href="blog-details.html">
+                                <img src="assets/images/blog/1.jpg" alt="blog">
+                            </a>
+                        </div>
+                        <div class="content">
+                            <ul>
+                                <li>
+                                    10 April 2020
+                                </li>
+                                <li>
+                                    <a href="#">By Admin</a>
+                                </li>
+                            </ul>
+                            <a href="blog-details.html">
+                                <h3>Joe’s Company Software Development Case</h3>
+                            </a>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas in fugit minima modi
+                                perspiciatis nam aspernatur porro</p>
+                            <a href="blog-details.html" class="line-bnt">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-blog">
+                        <div class="blog-img">
+                            <a href="blog-details.html">
+                                <img src="assets/images/blog/5.jpg" alt="blog">
+                            </a>
+                        </div>
+                        <div class="content">
+                            <ul>
+                                <li>
+                                    10 April 2020
+                                </li>
+                                <li>
+                                    <a href="#">By Admin</a>
+                                </li>
+                            </ul>
+                            <a href="blog-details.html">
+                                <h3>Temperature App UX Studies & Development Case</h3>
+                            </a>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas in fugit minima modi
+                                perspiciatis nam aspernatur porro</p>
+                            <a href="blog-details.html" class="line-bnt">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
+                    <div class="single-blog">
+                        <div class="blog-img">
+                            <a href="blog-details.html">
+                                <img src="assets/images/blog/3.jpg" alt="blog">
+                            </a>
+                        </div>
+                        <div class="content">
+                            <ul>
+                                <li>
+                                    10 April 2020
+                                </li>
+                                <li>
+                                    <a href="#">By Admin</a>
+                                </li>
+                            </ul>
+                            <a href="blog-details.html">
+                                <h3>IT Software Company Development Case</h3>
+                            </a>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas in fugit minima modi
+                                perspiciatis nam aspernatur porro</p>
+                            <a href="blog-details.html" class="line-bnt">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-btn text-center">
+                <p>We Have More Usefull Blogs For You. <a href="blog.html">View More</a></p>
+            </div>
+        </div>
+    </section>
+    --->
+
+    <section class="home-contact-area bg-color ptb-100">
+        <div class="container">
+            <div class="section-title">
+                <span>Contactanos</span>
+                <h2>¡Háganos saber acerca de su idea para mejorar CapacitaT Kocina!</h2>
+                <p>La parte mas importante de CapacitaT Kocina es su comunidad y como nos fortalecemos entre todos 
+                    para conseguir un mejor producto que mejore nuestro negocio y aumente nuestros ingresos. 
+                </p>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-6">
+                    <div class="contact-img">
+                        <img src="assets/images/contact-img.png" alt="contact">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="content">
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-lg-12 col-sm-12">
+                                    <div class="form-group">
+                                        <input type="text" name="name" id="name" class="form-control" required
+                                            data-error="Please enter your name" placeholder="Nombre" />
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-sm-12">
+                                    <div class="form-group">
+                                        <input type="email" name="email" id="email" class="form-control" required
+                                            data-error="Please enter your email" placeholder="Correo electronico" />
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-sm-12">
+                                    <div class="form-group">
+                                        <input type="text" name="phone_number" id="phone_number" required
+                                            data-error="Please enter your number" class="form-control"
+                                            placeholder="Numero de celular" />
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-sm-12">
+                                    <div class="form-group">
+                                        <input type="text" name="msg_subject" id="msg_subject" class="form-control"
+                                            required data-error="Please enter your subject" placeholder="Asunto" />
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="form-group">
+                                        <textarea name="message" class="form-control" id="message" cols="30" rows="5"
+                                            required data-error="Write your message"
+                                            placeholder="Escribe un mensaje..."></textarea>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12">
+                                    <button type="submit" class="default-btn page-btn box-btn">
+                                        Enviar <i class="fi fi-ss-avion-de-papel"></i>
+                                    </button>
+                                    <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer-area pt-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="content">
+                        <div class="logo">
+                            <a href="index.html"><img src="assets/images/logo2.png" alt="logo" /></a>
+                        </div>
                         <p>
-                            <br><h6>Semana 1:</h6>
-                            <br>
-                            •	Boceto de la interfaz de usuario y selección de paleta de colores.
-                            <br><h6>Semanas 2-5:</h6>
-                            <br>•	Desarrollo del backend de la aplicación utilizando NODE.JS y POSTGRESQL, con servidor web local.
-                            <br>•	Implementación de la base de datos según el diseño previamente establecido.
-                            <br>•	Desarrollo del frontend de la aplicación utilizando HTML, CSS y JavaScript.
-                            <br>•	Integración de componentes frontend y backend.
-                            <br>•	Realización de pruebas unitarias y de integración utilizando herramientas de desarrollo web.
-                            <br>•	Identificación y corrección de errores.
-                            <br>•	Optimización del rendimiento de la aplicación.
-                            <br>
-                            <br><h6>Semana final:</h6>
-                            <br>•	Documentación del código y del proceso de desarrollo.
-                            <br>•	Despliegue de la aplicación en un entorno de producción.
-                            <br>•	Capacitación para el equipo de la empresa capacitadora en el uso de la aplicación.
-                            <br>•	Monitoreo del funcionamiento de la aplicación y atención de posibles incidencias.
+                            El sitio de capacitacion mas rapido de contratar para aumentar las habilidades de tus empleados, mejorar tu servicio y competir contra las grandes cadenas gastronomicas. Aprende sobre cocina gourmet, cocina molecular, cocina regular y reposteria.
+                        </p>
+                        <div class="subscribe">
+                            <h4>Ingresa a la aventura</h4>
+                            <form class="newsletter-form" data-toggle="validator">
+                                <input type="email" id="emails" class="form-control" placeholder="Tu correo electronico"
+                                    name="EMAIL" required autocomplete="off">
+                                <button class="box-btn" type="submit">
+                                    Suscribete
+                                </button>
+                                <div id="validator-newsletter" class="form-result"></div>
+                            </form>
+                        </div>
+                        <ul class="social">
+                            <li>
+                                <i class="fi fi-brands-youtube"></i>
+                            </li>
+                            <li>
+                                <i class="fi fi-brands-tik-tok"></i>
+                            </li>
+                            <li>
+                                <i class="fi fi-brands-telegram"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!--
+                <div class="col-lg-2 col-md-6">
+                    <div class="content">
+                        <h3>Quick Links</h3>
+                        <ul class="footer-list">
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="solutions.html">Service</a></li>
+                            <li><a href="#">Career</a></li>
+                            <li><a href="privecy.html">Privacy & Policy</a></li>
+                            <li><a href="terms-condition.html">Terms & Conditions</a></li>
+                            <li><a href="#">Data Analysis</a></li>
+                        </ul>
+                    </div>
+                </div>--->
+                <div class="col-lg-3 col-md-6">
+                    <div class="content contacts">
+                        <h3 class="ml-40">Contactos</h3>
+                        <ul class="footer-list foot-social">
+                            <li><a href="tel:+524443579030"><i class="fi fi-brands-whatsapp"></i> +52 444 357 9030</a></li>
+                            <li><a href="/cdn-cgi/l/email-protection#462e232a2a2906362735296825292b"><i class="fi fi-sr-comment-alt-dots"></i><span class="__cf_email__"
+                                        data-cfemail="82eae7eeeeedc2f2e3f1edace1edef">eduardoa4848@Outlook.es</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <ul class="menu">
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="about.html">Sobre nosotros</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6">
+                        <p class="right">
+                            Copyright @2024 CapacitaT Kocina.
+                            <!---
+                            <a href="https://hibootstrap.com/" target="_blank">HiBootstrap.com</a>-->
                         </p>
                     </div>
                 </div>
             </div>
         </div>
+    </footer>
+
+
+    <div class="go-top">
+        <i class="fi fi-rr-caret-quare-up"></i>
+        <i class="fi fi-rr-caret-quare-up"></i>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-LYsoe0vSazt3B6VwIVlEvqdzJsln1vOHboyewlSK2rbsrL+RtwDLjoTr4dp7fhGT"
-        crossorigin="anonymous"></script>
+
+
+    <script data-cfasync="false" src="assets/js/email-decode.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/meanmenu.min.js"></script>
+
+    <script src="assets/js/magnific-popup.min.js"></script>
+
+    <script src="assets/js/owl.carousel.min.js"></script>
+
+    <script src="assets/js/wow.min.js"></script>
+
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+
+    <script src="assets/js/ajaxchimp.min.js"></script>
+
+    <script src="assets/js/contact-form-script.js"></script>
+
+    <script src="assets/js/main.js"></script>
+
+    <!--
+    <script data-cfasync="false" src="assets/js/email-decode.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/meanmenu.min.js"></script>
+
+    <script src="assets/js/magnific-popup.min.js"></script>
+
+    <script src="assets/js/owl.carousel.min.js"></script>
+
+    <script src="assets/js/wow.min.js"></script>
+
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+
+    <script src="assets/js/ajaxchimp.min.js"></script>
+
+    <script src="assets/js/form-validator.min.js"></script>
+    
+    <script src="assets/js/contact-form-script.js"></script>
+
+    <script src="assets/js/main.js"></script>-->
 </body>
 
 </html>
