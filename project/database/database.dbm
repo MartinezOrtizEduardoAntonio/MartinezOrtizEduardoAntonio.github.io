@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+CAUTION: Do not modify this file unless you know what you are doing.
+         Unexpected results may occur if the code is changed deliberately.
+-->
+<dbmodel pgmodeler-ver="0.7.0">
+<database name="new_database">
+</database>
+
+<schema name="public" protected="true" fill-color="#e1e1e1" sql-disabled="true">
+</schema>
+
+<table name="users">
+	<schema name="public"/>
+	<position x="44" y="28"/>
+	<column name="id">
+		<type name="bigserial"/>
+	</column>
+	<column name="first_name">
+		<type name="varchar" length="20"/>
+	</column>
+	<column name="second_name">
+		<type name="varchar" length="20"/>
+	</column>
+	<column name="last_name">
+		<type name="varchar" length="60"/>
+	</column>
+	<column name="password">
+		<type name="varchar" length="60"/>
+	</column>
+	<column name="type">
+		<type name="smallint"/>
+	</column>
+	<constraint name="id_key_users" type="pk-constr" factor="10" table="public.users">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="course">
+	<schema name="public"/>
+	<position x="656" y="271"/>
+	<column name="id">
+		<type name="bigserial"/>
+	</column>
+	<column name="name">
+		<type name="varchar" length="60"/>
+	</column>
+	<column name="description">
+		<type name="text"/>
+	</column>
+	<constraint name="id_key_course" type="pk-constr" factor="10" table="public.course">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="teacher">
+	<schema name="public"/>
+	<position x="61" y="284"/>
+	<column name="id">
+		<type name="bigserial"/>
+	</column>
+	<constraint name="id_teacher_key" type="pk-constr" factor="10" table="public.teacher">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<relationship name="teacher_has_many_course" type="rel1n"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 col-indexes="3" constr-indexes="1"
+	 src-table="public.teacher"
+	 dst-table="public.course"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="teacher_has_one_users" type="rel11"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 col-indexes="1" constr-indexes="1,2"
+	 src-table="public.users"
+	 dst-table="public.teacher"
+	 src-required="false" dst-required="false"/>
+
+<table name="customer">
+	<schema name="public"/>
+	<position x="653" y="41"/>
+	<column name="id">
+		<type name="bigserial"/>
+	</column>
+	<constraint name="id_key_customer" type="pk-constr" factor="10" table="public.customer">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+</dbmodel>

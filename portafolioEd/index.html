@@ -1,159 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-
-<body>
-    <div class="container">
-        portafolio
-        <hr>
-        <div class="row">
-            <div class="col">
-                <div class="card">
-                    <label for="">Objetivos</label>
-                    <hr>
-                    <p>
-                        Los objetivos de la página que se describe son los siguientes:
-
-                        Gestión eficiente de capacitadores: Desarrollar una plataforma que permita a la empresa
-                        capacitadora gestionar
-                        de manera eficiente a sus capacitadores, garantizando una asignación óptima de estos para
-                        satisfacer la demanda
-                        de capacitación y formación.
-
-                        Maximización de sesiones de capacitación: El principal objetivo es maximizar el número total de
-                        sesiones de
-                        capacitación ofrecidas cada semana, teniendo en cuenta las restricciones de disponibilidad de
-                        los capacitadores
-                        y las solicitudes de capacitación de las empresas clientes.
-
-                        Funcionalidades exclusivas para la empresa capacitadora: Desarrollar herramientas específicas
-                        para la empresa
-                        capacitadora, como el alta de capacitadores, alta de empresas clientes, gestión de cursos
-                        ofertados (incluyendo
-                        costos, horarios disponibles y asignación de capacitadores), generación de facturas para las
-                        empresas clientes,
-                        generación de totales a pagar a los capacitadores mensualmente, entre otras.
-
-                        Acceso compartido: Proporcionar acceso compartido a ciertas funcionalidades, como la consulta
-                        del plan de
-                        capacitaciones semanal o mensual, que puede ser consultado por la empresa capacitadora, los
-                        capacitadores y las
-                        empresas clientes.
-
-                        Facilidades de gestión: Ofrecer opciones de alta, baja, edición y consulta de empresas cliente y
-                        capacitadores,
-                        con y sin filtros, para una gestión eficiente de la base de datos de la empresa capacitadora.
-
-                        Consulta de información relevante: Permitir la consulta de información relevante, como la
-                        disponibilidad de
-                        capacitadores, pagos mensuales a los capacitadores, etc., exclusivamente para la empresa
-                        capacitadora.
-
-                        Es importante definir un boceto y paletas de colores en la etapa de planificación para
-                        garantizar una interfaz
-                        intuitiva y atractiva para los usuarios finales de la plataforma.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <br><br>
-        <div class="row">
-            <div class="card">
-                <h3>Diagrama Relacional</h3>
-                <center><img src="database/image.png" alt="" width="500px" height="500px"></center>
-                <p>
-                    Con estas entidades en mente, puedes establecer las relaciones entre ellas:
-
-                    Un Capacitador puede impartir varios Cursos.
-                    Un Curso puede tener varias Sesiones de Capacitación.
-                    Una Empresa Cliente puede solicitar múltiples Sesiones de Capacitación.
-                    Una Sesión de Capacitación está asociada a un solo Curso y una sola Empresa Cliente.
-                    Una Factura está asociada a una sola Empresa Cliente.
-                    Estas son solo algunas sugerencias iniciales para la estructura de la base de datos. Es importante
-                    que adaptes este diseño según las necesidades específicas de tu aplicación, teniendo en cuenta
-                    detalles como la normalización de datos, restricciones de integridad referencial, entre otros
-                    aspectos. ¡Espero que esta idea te sea útil para comenzar a desarrollar tu aplicación!
-                </p>
-
-                <h3>Mapa del sitio</h3>
-                <center><img src="database/WEB.png" alt="" width="500px" height="500px"></center>
-                <br>
-                <p>
-                    El propósito de un mapa del sitio es proporcionar una estructura visual de la organización y la
-                    jerarquía de las páginas web dentro de un sitio. Es una herramienta útil tanto para los
-                    desarrolladores web como para los usuarios finales. Algunos de sus propósitos principales son:
-
-                    Facilitar la navegación: Un mapa del sitio ayuda a los usuarios a comprender la estructura del sitio
-                    y a encontrar fácilmente la información que están buscando. Esto es especialmente útil en sitios web
-                    grandes con muchas páginas.
-
-                    Mejorar la usabilidad: Al proporcionar una vista general de todas las páginas disponibles en el
-                    sitio, un mapa del sitio puede mejorar la experiencia del usuario al permitirles navegar de manera
-                    más eficiente y rápida.
-
-                    Ayudar en la planificación y el diseño: Los mapas del sitio son útiles durante la fase de
-                    planificación y diseño de un sitio web, ya que ayudan a los diseñadores y desarrolladores a
-                    organizar el contenido y la estructura del sitio de manera lógica y coherente.
-
-                    Optimización para motores de búsqueda (SEO): Al tener un mapa del sitio bien estructurado, los
-                    motores de búsqueda pueden indexar mejor todas las páginas del sitio, lo que puede mejorar su
-                    visibilidad en los resultados de búsqueda.
-
-                    Comunicar la estructura del sitio: Los mapas del sitio también son útiles para comunicar la
-                    estructura del sitio a otras partes interesadas, como clientes, gerentes de proyecto y equipos de
-                    marketing.
-
-                    En resumen, un mapa del sitio es una herramienta valiosa que ayuda a organizar y comunicar la
-                    estructura de un sitio web, facilitando la navegación para los usuarios y mejorando su visibilidad
-                    en los motores de búsqueda.
-                </p>
-            </div>
-        </div>
-        <br><br>
-        <div class="row">
-            <div class="col">
-                <div class="card">
-                    <div class="container">
-                        <h4>DIAGRAMA RC </h4>
-                        <center><img src="database/web2.png" alt="" width="500px" height="500px"></center>
-
-                        <h4>cronograma </h4>
-                        <p>
-                            <br><h6>Semana 1:</h6>
-                            <br>
-                            •	Boceto de la interfaz de usuario y selección de paleta de colores.
-                            <br><h6>Semanas 2-5:</h6>
-                            <br>•	Desarrollo del backend de la aplicación utilizando NODE.JS y POSTGRESQL, con servidor web local.
-                            <br>•	Implementación de la base de datos según el diseño previamente establecido.
-                            <br>•	Desarrollo del frontend de la aplicación utilizando HTML, CSS y JavaScript.
-                            <br>•	Integración de componentes frontend y backend.
-                            <br>•	Realización de pruebas unitarias y de integración utilizando herramientas de desarrollo web.
-                            <br>•	Identificación y corrección de errores.
-                            <br>•	Optimización del rendimiento de la aplicación.
-                            <br>
-                            <br><h6>Semana final:</h6>
-                            <br>•	Documentación del código y del proceso de desarrollo.
-                            <br>•	Despliegue de la aplicación en un entorno de producción.
-                            <br>•	Capacitación para el equipo de la empresa capacitadora en el uso de la aplicación.
-                            <br>•	Monitoreo del funcionamiento de la aplicación y atención de posibles incidencias.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-LYsoe0vSazt3B6VwIVlEvqdzJsln1vOHboyewlSK2rbsrL+RtwDLjoTr4dp7fhGT"
-        crossorigin="anonymous"></script>
-</body>
-
+<html lang="es">
+	<head>
+	  <title>Programación Web II</title>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="estilo/bootstrap.min.css">
+	  <link rel="stylesheet" href="estilo/sitio.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<script src="script/funciones.js"></script>
+		<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>                        
+			  </button>
+			  <a class="navbar-brand" href="#">UPSLP</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+			  <ul class="nav navbar-nav">
+				<li class="dropdown">
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Sesion 1<span class="caret"></span></a>
+				  <ul class="dropdown-menu" role="menu">
+					<li><a href="#" id="p1_12" onclick="cargaPractica('html/p1/ejercicio1/ejercicio_u1_01.html');return false;">Ejercicio 1.1</a></li>
+					<li><a href="#" id="p1_12" onclick="cargaPractica('html/p1/ejercicio2/ejercicio_u1_02.html');return false;">Ejercicio 1.2</a></li>
+					<li><a href="#" id="p1_12" onclick="cargaPractica('html/p1/ejercicio3/ejercicio_u1_03.html');return false;">Ejercicio 1.3</a></li>
+					<li><a href="#" id="p1_12" onclick="cargaPractica('html/p1/ejercicio4/ejercicio_u1_04.html');return false;">Ejercicio 1.4</a></li>
+					<li><a href="#" id="p1_12" onclick="cargaPractica('html/p1/ejercicio5/ejercicio_u1_05.html');return false;">Ejercicio 1.5</a></li>
+				  </ul>
+				</li>
+				<li class="dropdown">
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Sesion 2<span class="caret"></span></a>
+				  <ul class="dropdown-menu" role="menu">
+					<li><a href="html/p2/a1/index.php">Ejercicio 2.1</a></li>
+					<li><a href="html/p2/a2/index.php">Ejercicio 2.2</a></li>
+					<li><a href="html/p2/a3/index.php">Ejercicio 2.3</a></li>
+					<li><a href="html/p2/a4/index.php">Ejercicio 2.4</a></li>
+					<li><a href="html/p2/a5/index.php">Ejercicio 2.5</a></li>
+					<li><a href="html/p2/a6/index.html">Ejercicio 2.6</a></li>
+					<li><a href="html/p2/a7/index.html">Ejercicio 2.7</a></li>
+					<li><a href="html/p2/a8/index.html">Ejercicio 2.8</a></li>
+					<li><a href="html/p2/a9/index.html">Ejercicio 2.9</a></li>
+					<li><a href="html/p2/a10/index.php">Ejercicio 2.10</a></li>
+					<li class="divider"></li>
+					<li><a href="html/p2/examen/index.html">EXAMEN</a></li>
+				  </ul>
+				</li>
+				<li class="dropdown">
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Sesion 3<span class="caret"></span></a>
+				  <ul class="dropdown-menu" role="menu">
+					<li class="divider"></li>
+				  </ul>
+				</li>
+				<li class="dropdown">
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Ejercicios EXTRAS<span class="caret"></span></a>
+				  <ul class="dropdown-menu" role="menu">
+					<li class="divider"></li>
+				  </ul>
+				</li>
+			  </ul>
+			  <ul class="nav navbar-nav navbar-right">
+				<li><a href="#">Ene-Jun '25</a></li>
+			  </ul>
+			</div>
+		  </div>
+		</nav>
+		<div class="container-fluid text-center">    
+		  <div class="row content">
+			<div class="col-sm-2 sidenav">
+			</div>
+			<div class="col-sm-8 text-left" id="content" style="height: 800px"> 
+				<!-- Contenido -->
+			</div>
+			<div class="col-sm-2 sidenav">
+			</div>
+		  </div>
+		</div>
+		<footer class="container-fluid text-center">
+		  <p>0176535 - Martinez Ortiz Eduardo Antonio</p>
+		  <p>Ingeniería en Tecnologias de la Informacion</p>
+		</footer>
+	</body>
 </html>

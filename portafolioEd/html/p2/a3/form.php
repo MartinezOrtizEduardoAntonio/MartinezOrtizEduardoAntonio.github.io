@@ -16,4 +16,4 @@
 
     echo $_POST['rfc']."<br>";
     echo $_POST['cp']."<br>";
-?>
+?>   
