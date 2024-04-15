@@ -4,8 +4,8 @@
     $password = "ProgWeb2";
     $database = "u995592926_ejercicios_web"; 
     $connection = new mysqli($server, $username, $password, $database);
-    
-    $query="SELECT * FROM `productos`";
+
+    $query="SELECT * FROM productos";
     $result=mysqli_query($connection,$query) or die ("error insert ".mysqli_error());
 
     

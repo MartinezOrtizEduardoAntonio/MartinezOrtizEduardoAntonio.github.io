@@ -16,6 +16,9 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<column name="id">
 		<type name="bigserial"/>
 	</column>
+	<column name="username">
+		<type name="varchar" length="30"/>
+	</column>
 	<column name="first_name">
 		<type name="varchar" length="20"/>
 	</column>
@@ -28,17 +31,17 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<column name="password">
 		<type name="varchar" length="60"/>
 	</column>
-	<column name="type">
-		<type name="smallint"/>
-	</column>
 	<constraint name="id_key_users" type="pk-constr" factor="10" table="public.users">
 		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+	<constraint name="username_key_user" type="uq-constr" factor="10" table="public.users">
+		<columns names="username" ref-type="src-columns"/>
 	</constraint>
 </table>
 
 <table name="course">
 	<schema name="public"/>
-	<position x="656" y="271"/>
+	<position x="903" y="264"/>
 	<column name="id">
 		<type name="bigserial"/>
 	</column>
@@ -48,6 +51,15 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<column name="description">
 		<type name="text"/>
 	</column>
+	<column name="link">
+		<type name="text"/>
+	</column>
+	<column name="prices">
+		<type name="float"/>
+	</column>
+	<column name="status">
+		<type name="boolean"/>
+	</column>
 	<constraint name="id_key_course" type="pk-constr" factor="10" table="public.course">
 		<columns names="id" ref-type="src-columns"/>
 	</constraint>
@@ -55,7 +67,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 
 <table name="teacher">
 	<schema name="public"/>
-	<position x="61" y="284"/>
+	<position x="411" y="299"/>
 	<column name="id">
 		<type name="bigserial"/>
 	</column>
@@ -68,10 +80,24 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	 src-col-pattern="{sc}_{st}"
 	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
 	 src-fk-pattern="{st}_fk"
-	 col-indexes="3" constr-indexes="1"
+	 col-indexes="6" constr-indexes="1"
 	 src-table="public.teacher"
 	 dst-table="public.course"
 	 src-required="false" dst-required="false"/>
+
+<table name="customer">
+	<schema name="public"/>
+	<position x="420" y="426"/>
+	<column name="id">
+		<type name="bigserial"/>
+	</column>
+	<column name="name_company">
+		<type name="varchar" length="30"/>
+	</column>
+	<constraint name="id_key_customer" type="pk-constr" factor="10" table="public.customer">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
 
 <relationship name="teacher_has_one_users" type="rel11"
 	 src-col-pattern="{sc}_{st}"
@@ -82,15 +108,9 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	 dst-table="public.teacher"
 	 src-required="false" dst-required="false"/>
 
-<table name="customer">
+<table name="my_course">
 	<schema name="public"/>
-	<position x="653" y="41"/>
-	<column name="id">
-		<type name="bigserial"/>
-	</column>
-	<constraint name="id_key_customer" type="pk-constr" factor="10" table="public.customer">
-		<columns names="id" ref-type="src-columns"/>
-	</constraint>
+	<position x="576" y="98"/>
 </table>
 
 </dbmodel>
