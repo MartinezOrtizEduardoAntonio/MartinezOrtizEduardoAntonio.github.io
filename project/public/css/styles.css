@@ -2,4 +2,17 @@
     --background-color: #EFEFEF;
     --company-color: #EF7F01;
     --company-2-color: #002E66;
-  }
+}
+
+
+footer {
+    position: fixed; /* Fija el footer en la parte inferior */
+    bottom: 0; /* Lo coloca en la parte inferior */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    background-color: rgba(51, 51, 51, 0);
+    color: #000000;
+    text-align: center;
+    padding: 10px 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: .8rem;
+}

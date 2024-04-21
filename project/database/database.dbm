@@ -16,6 +16,9 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<column name="id">
 		<type name="bigserial"/>
 	</column>
+	<column name="email">
+		<type name="varchar" length="100"/>
+	</column>
 	<column name="username">
 		<type name="varchar" length="30"/>
 	</column>
@@ -31,6 +34,12 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<column name="password">
 		<type name="varchar" length="60"/>
 	</column>
+	<column name="birthday">
+		<type name="date"/>
+	</column>
+	<column name="privilege">
+		<type name="boolean"/>
+	</column>
 	<constraint name="id_key_users" type="pk-constr" factor="10" table="public.users">
 		<columns names="id" ref-type="src-columns"/>
 	</constraint>
@@ -41,7 +50,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 
 <table name="course">
 	<schema name="public"/>
-	<position x="903" y="264"/>
+	<position x="903" y="266"/>
 	<column name="id">
 		<type name="bigserial"/>
 	</column>
@@ -60,6 +69,12 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<column name="status">
 		<type name="boolean"/>
 	</column>
+	<column name="available_date">
+		<type name="date"/>
+	</column>
+	<column name="available_time">
+		<type name="time"/>
+	</column>
 	<constraint name="id_key_course" type="pk-constr" factor="10" table="public.course">
 		<columns names="id" ref-type="src-columns"/>
 	</constraint>
@@ -67,32 +82,41 @@ CAUTION: Do not modify this file unless you know what you are doing.
 
 <table name="teacher">
 	<schema name="public"/>
-	<position x="411" y="299"/>
+	<position x="412" y="300"/>
 	<column name="id">
 		<type name="bigserial"/>
+	</column>
+	<column name="status">
+		<type name="boolean"/>
 	</column>
 	<constraint name="id_teacher_key" type="pk-constr" factor="10" table="public.teacher">
 		<columns names="id" ref-type="src-columns"/>
 	</constraint>
 </table>
 
-<relationship name="teacher_has_many_course" type="rel1n"
-	 src-col-pattern="{sc}_{st}"
-	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
-	 src-fk-pattern="{st}_fk"
-	 col-indexes="6" constr-indexes="1"
-	 src-table="public.teacher"
-	 dst-table="public.course"
-	 src-required="false" dst-required="false"/>
-
 <table name="customer">
 	<schema name="public"/>
-	<position x="420" y="426"/>
+	<position x="938" y="76"/>
 	<column name="id">
 		<type name="bigserial"/>
 	</column>
 	<column name="name_company">
 		<type name="varchar" length="30"/>
+	</column>
+	<column name="name_representative">
+		<type name="text"/>
+	</column>
+	<column name="address">
+		<type name="text"/>
+	</column>
+	<column name="RFC">
+		<type name="text"/>
+	</column>
+	<column name="cellphone">
+		<type name="varchar" length="20"/>
+	</column>
+	<column name="phone">
+		<type name="varchar" length="20"/>
 	</column>
 	<constraint name="id_key_customer" type="pk-constr" factor="10" table="public.customer">
 		<columns names="id" ref-type="src-columns"/>
@@ -110,7 +134,52 @@ CAUTION: Do not modify this file unless you know what you are doing.
 
 <table name="my_course">
 	<schema name="public"/>
-	<position x="576" y="98"/>
+	<position x="577" y="100"/>
+	<column name="invoice">
+		<type name="bigserial"/>
+	</column>
+	<column name="buy_date">
+		<type name="timestamp"/>
+	</column>
+	<constraint name="key_invoice_id" type="pk-constr" factor="10" table="public.my_course">
+		<columns names="invoice" ref-type="src-columns"/>
+	</constraint>
 </table>
+
+<relationship name="users_has_many_my_course" type="rel1n"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 col-indexes="1" constr-indexes="0"
+	 src-table="public.users"
+	 dst-table="public.my_course"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="course_has_many_my_course" type="rel1n"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 col-indexes="2" constr-indexes="1"
+	 src-table="public.course"
+	 dst-table="public.my_course"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="customer_has_many_my_course" type="rel1n"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 col-indexes="3" constr-indexes="3"
+	 src-table="public.customer"
+	 dst-table="public.my_course"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="teacher_has_many_course" type="rel1n"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 col-indexes="8" constr-indexes="1"
+	 src-table="public.teacher"
+	 dst-table="public.course"
+	 src-required="false" dst-required="false"/>
 
 </dbmodel>
