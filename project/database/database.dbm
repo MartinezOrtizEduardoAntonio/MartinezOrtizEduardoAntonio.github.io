@@ -12,7 +12,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 
 <table name="users">
 	<schema name="public"/>
-	<position x="44" y="28"/>
+	<position x="44" y="29"/>
 	<column name="id">
 		<type name="bigserial"/>
 	</column>
