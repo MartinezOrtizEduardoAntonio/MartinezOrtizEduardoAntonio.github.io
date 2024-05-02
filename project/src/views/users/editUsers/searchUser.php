@@ -1,5 +1,10 @@
 <?php
+    require_once '../../../partials/navbar.php';
+?>
+
+<?php
     require_once '../../../lib/database.php';
+    require_once '../../../lib/show.php';
     $conexion = connection_with_database();
 
     // Escapar las variables POST para evitar inyección SQL
@@ -15,14 +20,17 @@
             <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css' rel='stylesheet'>
             <title>Insertar Usuario</title>
             <link rel='stylesheet' href='../../../../public/css/users/formUser.css'>
+            <meta charset='UTF-8'>
+            <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+            <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
         </head>
         <body>
             <div class='container'>
-            <h2>Edit a new user</h2>
+            <h2>Edit a user</h2>
             <hr>
-            <form action='addUser.php' method='POST'>
+            <form action='editUserForm.php' method='POST'>
                 <label for='email'>Email:</label>
-                <input type='email' id='email' name='email' required value={$values["email"]}>
+                <input type='email' id='email' name='email' required value={$values["email"]} readonly>
                 
                 <label for='username'>User Name:</label>
                 <input type='text' id='username' name='username' required value={$values["username"]}>
@@ -51,12 +59,28 @@
                 <br>
                 <button type='submit' class='btn btn-primary'>Update</button>
             </form>
+            <form id='deleteForm' action='deleteUser.php' method='POST'>
+                <button type='button' class='btn btn-danger' onclick='delete_user($values[id])'>Delete</button>
+            </form>
         </div>
         </body>
+
+        <script>
+            async function delete_user(idUser,nameUser){
+                if(await show_question('Delete user','Do you would like delete this user?')){
+                    document.getElementById('deleteForm').submit(); //this if for send the form delete 
+                }
+            }
+        </script>
         ";
     } else {
-        // Si no se encontraron resultados, recargar la página anterior
-        header("Location: userEdit.html");
-        exit(); // Es importante terminar el script después de redirigir
+        // if not exist user, show a message of error and roald the web old
+        show_message("this user not exist");
+        header("Location: ../users.php");
+        exit(); 
     }
+?>
+
+<?php
+    require_once '../../../partials/footer.php';
 ?>

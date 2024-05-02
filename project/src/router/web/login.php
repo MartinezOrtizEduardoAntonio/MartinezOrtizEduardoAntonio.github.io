@@ -1,25 +1,33 @@
 <?php 
     include '../../lib/database.php'; 
     $connection = connection_with_database();
-
-    // Verifica si el usuario ha ingresado un nombre de usuario
+    session_start(); //activate the session 
+    // 
     if (isset($_POST['username']) && !empty($_POST['username'])) {
-        // Realiza la consulta para verificar si existe el usuario
+        // we will waching if exist this username and password 
         $query = "SELECT * FROM `users` WHERE username='{$_POST['username']}'";
         $result = mysqli_query($connection, $query) or die("Error al consultar usuario: " . mysqli_error());
 
-        // Verifica si se encontró el usuario
+        // if we will looking if find the user
         if ($values = mysqli_fetch_array($result)) {
-            // Si el usuario existe, redirige a otra página
-            header("Location: otra_pagina.php");
+          //we will waching if the user is active 
+          if($values['active']){
+            // if the user exist, save the variables that we need
+            $_SESSION['username'] = $values['username']; //get the username 
+            $_SESSION['user_id'] = $values['id']; // get the id of the user
+            $_SESSION['privilege'] = $values['privilege']; // save the privilege of the user
+
+            //redirect to other web
+            header("Location: ../../views/users/dashboard.php");
             exit;
+          }else{
+            //create a message for show that the user not is activate 
+            $error_message = "This user not is active";
+          }
         } else {
-            // Si el usuario no existe, muestra un mensaje
-            $error_message = "Usuario no encontrado";
+            // if the user not was find, we show a message of error
+            $error_message = "User not find";
         }
-    } else {
-        // Si no se ha ingresado ningún nombre de usuario, muestra un mensaje
-        $error_message = "Por favor ingresa un nombre de usuario";
     }
     mysqli_close($connection);
 ?>
@@ -61,7 +69,7 @@
             <?php } ?>
         <br><br>
         <div class="container-form">
-      <form action="../../../src/router/web/login.php">
+      <form action="login.php" method="POST">
         <h2 class="mb-4">Iniciar sesión</h2>
         <div class="mb-3">
           <label for="username" class="form-label">Nombre de usuario</label>

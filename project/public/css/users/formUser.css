@@ -20,6 +20,8 @@ label {
     display: block;
     margin-bottom: 10px;
 }
+textarea,
+input[type="time"],
 input[type="text"],
 input[type="email"],
 input[type="password"],
