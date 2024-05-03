@@ -104,5 +104,5 @@
     }
 </script>
 <?php
-    require_once '../../../partials/footer.php';
+    require_once '/project/src/partials/footer.php';
 ?>

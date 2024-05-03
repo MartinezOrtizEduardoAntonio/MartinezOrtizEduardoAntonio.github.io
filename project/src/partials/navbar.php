@@ -1,12 +1,11 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css' rel='stylesheet'>
-<title>Insertar Usuario</title>
-<link rel='stylesheet' href='../../public/css/users/formUser.css'>
+<title>CAPACITAT</title>
 <meta charset='UTF-8'>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10">
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link rel='stylesheet' href='/project/public/css/users/formUser.css'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10">
-
 
 <?php
   session_start(); //activate the session 
@@ -45,7 +44,7 @@
                 </a>
                 <ul class='dropdown-menu' aria-labelledby='navbarDropdownMenuLink'>
                   <li><a class='dropdown-item' href='/project/src/views/users/users.php'>Show all the users</a></li>
-                  <li><a class='dropdown-item' href='/project/src/views/users/addUsers/addUsers.php'>Add a new user</a></li>
+                  <li><a class='dropdown-item' href='/project/src/views/users/addUsers/addUser.php'>Add a new user</a></li>
                 </ul>
               </li>
               <li class='nav-item dropdown'>
@@ -143,7 +142,3 @@
       header("Location: /project/src/router/web/login.php");
   }
 ?>
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js'></script>

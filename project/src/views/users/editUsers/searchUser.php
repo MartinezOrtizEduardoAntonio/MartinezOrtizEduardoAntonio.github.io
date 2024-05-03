@@ -5,15 +5,14 @@
 <?php
     require_once '../../../lib/database.php';
     require_once '../../../lib/show.php';
-    $conexion = connection_with_database();
-
-    // Escapar las variables POST para evitar inyección SQL
+    $connection = connection_with_database();
     $username = $_POST['username'];
     $query="SELECT * FROM `users` WHERE `username`='$username'";
-    $result = mysqli_query($conexion, $query) or die("Problemas en el select: " . mysqli_error($conexion));
-    mysqli_close($conexion);
-
+    $result=mysqli_query($connection,$query) or die ("error insert ".mysqli_error());
+    
+    
     if($values=mysqli_fetch_array($result)){
+
         echo "
         <!DOCTYPE html>
         <head>
@@ -30,28 +29,28 @@
             <hr>
             <form action='editUserForm.php' method='POST'>
                 <label for='email'>Email:</label>
-                <input type='email' id='email' name='email' required value={$values["email"]} readonly>
+                <input type='email' id='email' name='email' required value='{$values["email"]}' readonly>
                 
                 <label for='username'>User Name:</label>
-                <input type='text' id='username' name='username' required value={$values["username"]}>
+                <input type='text' id='username' name='username' required value='{$values["username"]}'>
         
                 <label for='first_name'>Name:</label>
-                <input type='text' id='first_name' name='first_name' required value={$values["first_name"]}>
+                <input type='text' id='first_name' name='first_name' required value='{$values["first_name"]}'>
         
                 <label for='second_name'>Second Name:</label>
-                <input type='text' id='second_name' name='second_name' value={$values["second_name"]}>
+                <input type='text' id='second_name' name='second_name' value='{$values["second_name"]}'>
         
                 <label for='last_name'>Last Name:</label>
-                <input type='text' id='last_name' name='last_name' required value={$values["last_name"]}>
+                <input type='text' id='last_name' name='last_name' required value='{$values["last_name"]}'>
         
                 <label for='password'>Password:</label>
-                <input type='password' id='password' name='password' required value={$values["password"]}>
+                <input type='password' id='password' name='password' required value='{$values["password"]}'>
         
                 <label for='birthday'>Birthday:</label>
-                <input type='date' id='birthday' name='birthday' required value={$values["birthday"]}>
+                <input type='date' id='birthday' name='birthday' required value='{$values["birthday"]}'>
         
                 <label for='privilege'>Privilage:</label>
-                <select id='privilege' name='privilege' class='form-select' value={$values["privilege"]}>
+                <select id='privilege' name='privilege' class='form-select' value='{$values["privilege"]}'>
                     <option value='1'>user</option>
                     <option value='2'>teacher</option>
                     <option value='3'>admin</option>
@@ -60,13 +59,14 @@
                 <button type='submit' class='btn btn-primary'>Update</button>
             </form>
             <form id='deleteForm' action='deleteUser.php' method='POST'>
-                <button type='button' class='btn btn-danger' onclick='delete_user($values[id])'>Delete</button>
+            <input type='hidden' id='userId' name='userId' value='{$values["id"]}'>
+                <button type='button' class='btn btn-danger' onclick='delete_user()'>Delete</button>
             </form>
         </div>
         </body>
 
         <script>
-            async function delete_user(idUser,nameUser){
+            async function delete_user(){
                 if(await show_question('Delete user','Do you would like delete this user?')){
                     document.getElementById('deleteForm').submit(); //this if for send the form delete 
                 }
@@ -79,8 +79,10 @@
         header("Location: ../users.php");
         exit(); 
     }
+
+    mysqli_close($conexion);
 ?>
 
 <?php
-    require_once '../../../partials/footer.php';
+    require_once '/project/src/partials/footer.php';
 ?>
