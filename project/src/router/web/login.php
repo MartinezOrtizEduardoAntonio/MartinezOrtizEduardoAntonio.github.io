@@ -5,7 +5,7 @@
     // 
     if (isset($_POST['username']) && !empty($_POST['username'])) {
         // we will waching if exist this username and password 
-        $query = "SELECT * FROM `users` WHERE username='{$_POST['username']}'";
+        $query = "SELECT * FROM `users` WHERE username='{$_POST['username']}' and password='{$_POST['password']}'";
         $result = mysqli_query($connection, $query) or die("Error al consultar usuario: " . mysqli_error());
 
         // if we will looking if find the user
@@ -69,20 +69,41 @@
             <?php } ?>
         <br><br>
         <div class="container-form">
-      <form action="login.php" method="POST">
-        <h2 class="mb-4">Iniciar sesión</h2>
-        <div class="mb-3">
-          <label for="username" class="form-label">Nombre de usuario</label>
-          <input type="text" class="form-control" id="username" name="username" required>
-        </div>
-        <div class="mb-3">
-          <label for="password" class="form-label">Contraseña</label>
-          <input type="password" class="form-control" id="password" name="password" required>
-        </div>
-        <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+        <form action="login.php" method="POST" onsubmit="return validateForm()">
+          <h2 class="mb-4">Iniciar sesión</h2>
+          <div class="mb-3">
+              <label for="username" class="form-label">Nombre de usuario</label>
+              <input type="text" class="form-control" id="username" name="username" required pattern="[a-zA-Z0-9]+" title="Por favor, ingresa solo letras y números">
+          </div>
+          <div class="mb-3">
+              <label for="password" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" id="password" name="password" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Iniciar sesión</button>
       </form>
       </div>
     </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+<script>
+  function validateForm() {
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+
+      // Verifica que el username no contenga caracteres especiales
+      if (!/^[a-zA-Z0-9]+$/.test(username)) {
+          alert('El nombre de usuario solo puede contener letras y números.');
+          return false;
+      }
+
+      // Verifica que no haya caracteres especiales en la contraseña
+      if (/[^a-zA-Z0-9]/.test(password)) {
+          alert('La contraseña no puede contener caracteres especiales.');
+          return false;
+      }
+
+      return true;
+  }
+</script>

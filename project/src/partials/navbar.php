@@ -34,8 +34,16 @@
                   Customer
                 </a>
                 <ul class='dropdown-menu' aria-labelledby='navbarDropdownMenuLink'>
-                  <li><a class='dropdown-item' href='/project/src/views/users/addUsers/addUsers.php'>Show all the customers</a></li>
-                  <li><a class='dropdown-item' href='/project/src/views/users/addUsers/addUsers.php'>Add a new customer</a></li>
+                  <li><a class='dropdown-item' href='/project/src/views/course/course.php'>Show all the customers</a></li>
+                  <li><a class='dropdown-item' href='/project/src/views/course/addCourse.php'>Add a new customer</a></li>
+                </ul>
+              </li>
+              <li class='nav-item dropdown'>
+                <a class='nav-link dropdown-toggle' href='#' id='navbarDropdownMenuLink' role='button' data-bs-toggle='dropdown' aria-expanded='false'>
+                  Teacher
+                </a>
+                <ul class='dropdown-menu' aria-labelledby='navbarDropdownMenuLink'>
+                  <li><a class='dropdown-item' href='/project/src/views/teacher/teacher.php'>Show all the teacher</a></li>
                 </ul>
               </li>
               <li class='nav-item dropdown'>

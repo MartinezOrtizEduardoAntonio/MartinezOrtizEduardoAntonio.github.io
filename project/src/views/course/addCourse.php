@@ -33,6 +33,29 @@
             <label for="birthday">Available time:</label>
             <input type="time" id="birthday" name="available_time" required>
 
+
+            <?php
+                require_once '../../lib/database.php';
+                $conexion = connection_with_database();
+
+                //we will to select all the teacher that is activate 
+                $query = "SELECT * from `users` WHERE privilege=2";
+
+                $result = mysqli_query($conexion, $query) or die("Problemas en el select: " . mysqli_error($conexion));
+            
+                echo "<div class='mb-3'>";
+                echo "<label for='teacher' class='form-label'>Teacher:</label>";
+                echo "<select id='teacher' name='teacher' class='form-select'>";
+
+                while ($row = mysqli_fetch_assoc($result)) {
+                    echo "<option value='{$row['id']}'>{$row['username']} - {$row['first_name']} {$row['last_name']}</option>";
+                }
+
+                echo "</select>";
+                echo "</div>";
+
+                mysqli_close($conexion);
+            ?>
             <br>
             <button type="submit" class="btn btn-primary">Save</button>
         </form>
