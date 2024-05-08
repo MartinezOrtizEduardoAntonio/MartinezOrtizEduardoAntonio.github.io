@@ -52,8 +52,8 @@
                 <label for='privilege'>Privilege:</label>
                 <select id='privilege' name='privilege' class='form-select'>
                     <option value='1' " . ($values["privilege"] == 1 ? "selected" : "") . ">user</option>
-                    <option value='2' " . ($values["privilege"] == 0 ? "selected" : "") . ">teacher</option>
-                    <option value='3' " . ($values["privilege"] == 0 ? "selected" : "") . ">admin</option>
+                    <option value='2' " . ($values["privilege"] == 2 ? "selected" : "") . ">teacher</option>
+                    <option value='3' " . ($values["privilege"] == 3 ? "selected" : "") . ">admin</option>
                 </select>
                 <br>
                 <button type='submit' class='btn btn-primary'>Update</button>
