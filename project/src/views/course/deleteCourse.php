@@ -1,10 +1,10 @@
 <?php
-    require_once '../../../partials/navbar.php';
+    require_once '../../partials/navbar.php';
 ?>
 
 <?php
-    require_once '../../../lib/database.php';
-    require_once '../../../lib/show.php';
+    require_once '../../lib/database.php';
+    require_once '../../lib/show.php';
     $connection = connection_with_database();
 
     // get el user id
@@ -25,5 +25,5 @@
 ?>
 
 <?php
-    require_once '/project/src/partials/footer.php';
+    require_once '../../partials/footer.php';
 ?>

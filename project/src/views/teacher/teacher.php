@@ -15,49 +15,42 @@
 
 <?php
     require_once '../../lib/database.php';
-    $conexion = connection_with_database();
+    $connection = connection_with_database();
 
-    // We will read all the users
-    $query = "SELECT t.id, t.id_users, u.username, u.email, u.first_name, u.second_name, u.last_name 
-              FROM teacher t
-              JOIN users u ON t.id_users = u.id
-              WHERE t.status = 1;";
+    $query = "SELECT * FROM `users` WHERE `privilege` = '2'";
 
-    $result = mysqli_query($conexion, $query); // Ejecutar la consulta y almacenar el resultado
+    $result = mysqli_query($connection, $query) or die("Error en la consulta: " . mysqli_error($connection));
 
-    // This is the start of the table
     echo "
         <div class='container'>
-        <table class='table table-striped'>
-        <thead>
-        <tr>
-            <th>Username</th>
-            <th>Name</th>
-            <th>Email</th>
-        </tr>
-        </thead>
-        <tbody>
+            <table class='table table-striped'>
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
     ";
 
-    // Show all the user in a table
-    while ($values = mysqli_fetch_array($result)) {
+    while ($user = mysqli_fetch_array($result)) {
         echo "
             <tr>
-                <td>{$values['username']}</td>
-                <td>{$values['first_name']} {$values['second_name']} {$values['last_name']}</td>
-                <td>{$values['email']}</td>
+                <td>{$user['username']}</td>
+                <td>{$user['first_name']} {$user['second_name']} {$user['last_name']}</td>
+                <td>{$user['email']}</td>
             </tr>
         ";
     }
 
-    // Show the
     echo "
-        </tbody>
-        </table>
+                </tbody>
+            </table>
         </div>
     ";
 
-    mysqli_close($conexion);
+    mysqli_close($connection);
 ?>
 
 

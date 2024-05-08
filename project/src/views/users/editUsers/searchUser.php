@@ -48,12 +48,12 @@
         
                 <label for='birthday'>Birthday:</label>
                 <input type='date' id='birthday' name='birthday' required value='{$values["birthday"]}'>
-        
-                <label for='privilege'>Privilage:</label>
-                <select id='privilege' name='privilege' class='form-select' value='{$values["privilege"]}'>
-                    <option value='1'>user</option>
-                    <option value='2'>teacher</option>
-                    <option value='3'>admin</option>
+                
+                <label for='privilege'>Privilege:</label>
+                <select id='privilege' name='privilege' class='form-select'>
+                    <option value='1' " . ($values["privilege"] == 1 ? "selected" : "") . ">user</option>
+                    <option value='2' " . ($values["privilege"] == 0 ? "selected" : "") . ">teacher</option>
+                    <option value='3' " . ($values["privilege"] == 0 ? "selected" : "") . ">admin</option>
                 </select>
                 <br>
                 <button type='submit' class='btn btn-primary'>Update</button>
@@ -74,15 +74,15 @@
         </script>
         ";
     } else {
-        // if not exist user, show a message of error and roald the web old
+        // if not exist user, show a message of error and reload the web page
         show_message("this user not exist");
         header("Location: ../users.php");
         exit(); 
     }
 
-    mysqli_close($conexion);
+    mysqli_close($connection);
 ?>
 
 <?php
-    require_once '/project/src/partials/footer.php';
+    require_once '../../../partials/footer.php';
 ?>
