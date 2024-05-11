@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+	<title>Form Reviews</title>
+</head>
+<body>
+
+	<div class="wrapper">
+        <video width="90%" height="50%" controls>
+            <source src="https://www.youtube.com/watch?v=qay6DRZ9BIU" type="video/mp4">
+            <!-- Si el navegador no puede reproducir el video, aquí puedes agregar un mensaje alternativo -->
+            Tu navegador no soporta la reproducción de video.
+        </video>
+
+		<h3>Te gusto el tutorial?</h3>
+		<form action="#">
+			<div class="rating">
+				<input type="number" name="rating" hidden>
+				<i class='bx bx-star star' style="--i: 0;"></i>
+				<i class='bx bx-star star' style="--i: 1;"></i>
+				<i class='bx bx-star star' style="--i: 2;"></i>
+				<i class='bx bx-star star' style="--i: 3;"></i>
+				<i class='bx bx-star star' style="--i: 4;"></i>
+			</div>
+			<textarea name="opinion" cols="30" rows="5" placeholder="Tu opinion..."></textarea>
+			<div class="btn-group">
+				<button type="submit" class="btn submit">Enviar</button>
+				<button class="btn cancel">Cancelar</button>
+			</div>
+		</form>
+	</div>
+
+    <script src="index.js"></script>
+</body>
+</html>

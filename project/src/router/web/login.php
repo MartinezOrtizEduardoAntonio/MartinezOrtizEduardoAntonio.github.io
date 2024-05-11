@@ -93,6 +93,7 @@
       var password = document.getElementById('password').value;
 
       // Verifica que el username no contenga caracteres especiales
+      /*
       if (!/^[a-zA-Z0-9]+$/.test(username)) {
           alert('El nombre de usuario solo puede contener letras y números.');
           return false;
@@ -103,7 +104,7 @@
           alert('La contraseña no puede contener caracteres especiales.');
           return false;
       }
-
+      */
       return true;
   }
 </script>
