@@ -75,9 +75,8 @@
         ";
     } else {
         // if not exist user, show a message of error and reload the web page
-        show_message("this user not exist");
-        header("Location: ../users.php");
-        exit(); 
+        show_message_error("this user not exist");
+        //header("Location: ../users.php");
     }
 
     mysqli_close($connection);
@@ -86,3 +85,4 @@
 <?php
     require_once '../../../partials/footer.php';
 ?>
+

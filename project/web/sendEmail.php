@@ -7,7 +7,7 @@ $msg_subject = $_POST['msg_subject'];
 $message = $_POST['message'];
 
 // Dirección de correo electrónico a la que se enviará el correo
-$destinatario = "eduardoa4848@Outlook.es";
+$destinatario = $email;
 
 // Asunto del correo
 $asunto = "Nuevo mensaje de contacto: $msg_subject";

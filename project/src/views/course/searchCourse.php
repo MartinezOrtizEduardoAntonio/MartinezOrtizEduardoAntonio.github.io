@@ -79,7 +79,6 @@
         ";
     } else {
         show_message_error("This course does not exist");
-        exit();
     }
 
     mysqli_close($connection);

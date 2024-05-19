@@ -9,7 +9,7 @@
                 /* Estilos personalizados aquí */
                 body {
                     background-color: #f8f9fa;
-                    padding-top: 50px;
+                    
                 }
                 .container {
                     max-width: 600px;
@@ -18,17 +18,17 @@
         </head>
         <body>
         
-        <div class='container'>
-            <div class='alert alert-success' role='alert'>
-                <h4 class='alert-heading'>" . htmlspecialchars($message) . "</h4>
-                <hr>
+            <div class='container'>
+                <div class='alert alert-success' role='alert'>
+                    <h4 class='alert-heading'>" . htmlspecialchars($message) . "</h4>
+                    <hr>
+                </div>
             </div>
-        </div>
         </body>
         </html>
         ";
     }
-
+    
     function show_message_error($message){
         echo "
         <!DOCTYPE html>
@@ -38,7 +38,6 @@
                 /* Estilos personalizados aquí */
                 body {
                     background-color: #f8f9fa;
-                    padding-top: 50px;
                 }
                 .container {
                     max-width: 600px;

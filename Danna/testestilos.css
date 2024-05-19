@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/** {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}*/
+
+:root {
+	--yellow: #FFBD13;
+	--blue: #270041;
+	--blue-d-1: #72017c96;
+	--light: #F5F5F5;
+	--grey: #AAA;
+	--white: #8d8d8d;
+	--shadow: 8px 8px 30px rgba(0,0,0,.05);
+}
+
+.wrapper {
+	background: var(--white);
+	padding: 2rem;
+	width: 75%;
+	border-radius: .75rem;
+	box-shadow: var(--shadow);
+	text-align: center;
+}
+
+.wrapper h3 {
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin-bottom: 1rem;
+}
+
+.rating {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	grid-gap: .5rem;
+	font-size: 2rem;
+	color: var(--yellow);
+	margin-bottom: 2rem;
+}
+
+.rating .star {
+	cursor: pointer;
+}
+
+.rating .star.active {
+	opacity: 0;
+	animation: animate .5s calc(var(--i) * .1s) ease-in-out forwards;
+}
+
+@keyframes animate {
+	0% {
+		opacity: 0;
+		transform: scale(1);
+	}
+	50% {
+		opacity: 1;
+		transform: scale(1.2);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+
+.rating .star:hover {
+	transform: scale(1.1);
+}
+
+textarea {
+	width: 100%;
+	background: var(--light);
+	padding: 1rem;
+	border-radius: .5rem;
+	border: none;
+	outline: none;
+	resize: none;
+	margin-bottom: .5rem;
+}
+
+.btn-group {
+	display: flex;
+	grid-gap: .5rem;
+	align-items: center;
+}
+
+.btn-group .btn {
+	padding: .75rem 1rem;
+	border-radius: .5rem;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-size: .875rem;
+	font-weight: 500;
+}
+
+.btn-group .btn.submit {
+	background: #270041;
+	color: white;
+}
+
+.btn-group .btn.submit:hover {
+	background: #72017c96;
+}
+
+.btn-group .btn.cancel {
+	background: #270041;
+	color: white;
+}
+
+.btn-group .btn.cancel:hover {
+	background: #72017c96;
+}
+
+
+/*MIS ESTILOS CHINGONES*/
+ul{
+    font-family: "Roboto Mono", monospace;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #270041;
+    align-items: center;
+  }
+
+  li{
+    float: left;
+    align-items: center;
+  }
+
+  li a{
+    display: block;
+    color: rgb(247, 240, 240);
+    text-align: center;
+    align-items: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover{
+    background-color: #72017c96;
+  }
+
+
+  .header{
+    padding: 15px;
+    text-align: center;
+    background: #181818;
+  }
+
+  .leftcolumn {   
+    float: left;
+    width: 75%;
+  }
+
+  .rightcolumn {
+    float: left;
+    width: 25%;
+    background-color: #ffffff;
+    padding-left: 20px;
+  }
+
+  .card {
+    background-color: #8d8d8d;
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  .row::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: #ffffff;
+    margin-top: 20px;
+  }
+
+  @media screen and (max-width: 800px){
+    .leftcolumn, .rightcolumn {   
+       width: 100%;
+       padding: 0;
+     }
+   }
+   
+
+  h1{
+    font-family: "Arvo", serif;
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+  }
+  
+  h2{
+    font-family: "Imbue", serif;
+    font-size: 27px;
+    color: rgb(255, 255, 255);
+  }
+  
+  h3{
+    font-family: "Abril Fatface", serif;
+    font-size: 32px;
+    color: rgb(0, 0, 0);
+  }
+
+  h4{
+    font-family: "Graduate", serif;
+    font-size: 20px;
+    color: black;
+  }
+
+  h5{
+    font-family: "Preahvihear", sans-serif;
+    font-size: 21px;
+    color: black;
+  }
+  
+  p{
+    font-family: "Zilla Slab", serif;
+    font-size: 20px;
+    color: black;
+  }
+
+
+  input[type=button]{
+      display: flex;
+      grid-gap: .5rem;
+      align-items: center;
+
+      padding: .75rem 1rem;
+      border-radius: .5rem;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      font-size: .875rem;
+      font-weight: 500;
+
+      background: #72017c96;
+      background: #270041;
+      color: white;
+  }

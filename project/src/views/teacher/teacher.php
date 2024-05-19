@@ -4,9 +4,9 @@
 
 
 <div class="container">
-    <form action="searchTeacher.php" method="POST">
+    <form action="/project/src/views/users/editUsers/searchUser.php" method="POST">
         <label for="email"><i class="fi fi-br-search"></i> Search a teacher:</label>
-        <input type="text" id="email" name="teacher" required placeholder="Teacher">
+        <input type="text" id="email" name="username" required placeholder="Teacher">
         <button class="btn-form">Search</button>
     </form>
 </div>

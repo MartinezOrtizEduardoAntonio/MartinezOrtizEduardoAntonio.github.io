@@ -33,10 +33,10 @@
 
                     echo "
                         <tr>
-                            <td>{$values['name']}</td>
+                            <td><a href={$values['link']} target='_blank'>{$values['name']}</a></td>
                             <td>{$values['description']}</td>
                             <td>
-                                <video width='320' height='180' controls>
+                                <video width='100%' height='auto' controls>
                                     <source src='{$values['link']}' type='video/mp4'>
                                 </video>
                             </td>

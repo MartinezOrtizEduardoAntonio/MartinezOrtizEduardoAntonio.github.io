@@ -49,6 +49,8 @@
                 </a>
                 <ul class='dropdown-menu' aria-labelledby='navbarDropdownMenuLink'>
                   <li><a class='dropdown-item' href='/project/src/views/users/users.php'>Show all the users</a></li>
+                  <li><a class='dropdown-item' href='/project/src/views/users/customer.php'>Show all customer</a></li>
+                  <li><a class='dropdown-item' href='/project/src/views/users/admin.php'>Show all admin</a></li>
                   <li><a class='dropdown-item' href='/project/src/views/users/addUsers/addUser.php'>Add a new user</a></li>
                 </ul>
               </li>
@@ -58,6 +60,8 @@
                 </a>
                 <ul class='dropdown-menu' aria-labelledby='navbarDropdownMenuLink'>
                   <li><a class='dropdown-item' href='/project/src/views/course/courses.php'>Show all the courses</a></li>
+                  <li><a class='dropdown-item' href='/project/src/views/course/courseActivate.php'>show the course activate</a></li>
+                  <li><a class='dropdown-item' href='/project/src/views/course/courseDesactivate.php'>show the course desactivate</a></li>
                   <li><a class='dropdown-item' href='/project/src/views/course/addCourse.php'>Add a new course</a></li>
                 </ul>
               </li>
@@ -87,8 +91,10 @@
                 Courses
               </a>
               <ul class='dropdown-menu' aria-labelledby='navbarDropdownMenuLink'>
-                <li><a class='dropdown-item' href='/project/src/views/course/courses.php'>Show all the courses</a></li>
-                <li><a class='dropdown-item' href='/project/src/views/course/addCourse.php'>Add a new course</a></li>
+              <li><a class='dropdown-item' href='/project/src/views/course/courses.php'>Show all the courses</a></li>
+              <li><a class='dropdown-item' href='/project/src/views/course/courseActivate.php'>show the course activate</a></li>
+              <li><a class='dropdown-item' href='/project/src/views/course/courseDesactivate.php'>show the course desactivate</a></li>
+              <li><a class='dropdown-item' href='/project/src/views/course/addCourse.php'>Add a new course</a></li>
               </ul>
             </li>
             <li class='nav-item'>
